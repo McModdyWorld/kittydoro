@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kittydoro - Cute Productivity Timer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial Rounded MT Bold', 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #ffebf3;
+            color: #ff69b4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #ff9ecb;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            flex: 1;
+        }
+        
+        h1, h2 {
+            color: #ff69b4;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .app-info {
+            background-color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+            text-align: center;
+        }
+        
+        .app-screenshot {
+            max-width: 400px; /* Reduced from 600px */
+            border-radius: 10px;
+            margin: 1rem auto 2rem;
+            display: block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .features {
+            display: flex; /* Changed from grid to flex */
+            justify-content: space-between; /* Distribute items evenly */
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+            flex: 1; /* Make items take equal space */
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff69b4;
+        }
+        
+        .download-section {
+            background-color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+        }
+        
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .header-downloads {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .download-btn {
+            background-color: #ff69b4;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .header-downloads .download-btn {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.9rem;
+        }
+        
+        .download-btn:hover {
+            background-color: #ff4aa5;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(255, 105, 180, 0.4);
+        }
+        
+        footer {
+            background-color: #ff9ecb;
+            padding: 1rem;
+            text-align: center;
+            margin-top: auto;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            color: white;
+        }
+        
+        .heart {
+            color: #ff69b4;
+            font-size: 1.2rem;
+        }
+        
+        .bow {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 10px;
+            right: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column; /* Stack vertically on small screens */
+            }
+            
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Kittydoro</h1>
+            <p>The Cutest Productivity Timer</p>
+        </div>
+        <div class="download-buttons header-downloads">
+            <a href="https://github.com/McModdyWorld/kittydoro/raw/refs/heads/download/Kittydoro-1.0.2.exe" class="download-btn">
+                <img src="windows.svg" width="24" height="24" alt="Windows">
+                <span>Windows</span>
+            </a>
+            <a href="https://github.com/McModdyWorld/kittydoro/raw/refs/heads/download/Kittydoro-1.0.2.dmg" class="download-btn">
+                <img src="macos.svg" width="24" height="30" alt="macOS">
+                <span>macOS</span>
+            </a>
+            <a href="https://github.com/McModdyWorld/kittydoro/raw/refs/heads/download/Kittydoro-1.0.2.AppImage" class="download-btn">
+                <img src="linux.svg" width="34" height="34" alt="Linux">
+                <span>Linux</span>
+            </a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="app-info">
+            <h2>Focus with Cuteness!</h2>
+            <img src="pic.png" alt="Kittydoro App Screenshot" class="app-screenshot">
+            <p>Kittydoro is an adorable productivity timer that helps you stay focused and organized with the cutest companion!</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-item">
+                <div class="feature-icon">⏱️</div>
+                <h3>Pomodoro Timer</h3>
+                <p>Stay productive with customizable work sessions and breaks</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">📝</div>
+                <h3>Task Management</h3>
+                <p>Keep track of your to-do list while you work</p>
+            </div>
+            <div class="feature-item">
+                <div class="feature-icon">🎀</div>
+                <h3>Super Cute Design</h3>
+                <p>Enjoy the adorable themed interface while you work</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <p>Made with <span class="heart">♥</span> by Alexander</p>
+        </div>
+    </footer>
+</body>
+</html>
